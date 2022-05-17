@@ -1,0 +1,19 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap');
+
+
+.container {
+    color: #adb5bd; 
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+   
+}
+    
+.container  >  h1 {
+    font-size: 50px;
+}
+
+
+.linkSpan {
+    font-size: 25px;
+}

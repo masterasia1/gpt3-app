@@ -2,6 +2,9 @@
 import React from "react";
 import { Component } from  'react';
 import {Container, Form, Button, Spinner,  Card} from 'react-bootstrap';
+import './Home.css'
+
+
 const { Configuration, OpenAIApi } = require('openai');
 
 
@@ -54,9 +57,12 @@ class Home extends Component {
         return (
             <div>
                 <Container>
+                    <div>
+                    <a href="https://www.youtube.com"><span className="linkSpan">See How It's Done</span></a>
+                    </div>
                     <br />
                     <br />
-                    <h1>Generate Free Product Descriptions</h1>
+                    <h1> 🔥 Generate Free AI Product Descriptions 🔥 </h1>
                     <br />
                     <h4>Generate a unique product description for any product in the world! Simply enter the product name and a few details</h4>
                     <br />
