@@ -13,7 +13,7 @@ class Home extends Component {
     constructor () {
         super ()
         this.state = {
-            heading: 'See the AI response below',
+            heading: 'See the AI response below 🤖',
             response: '(be patient! response may take up to 20 seconds to load)',
             loading:false
         }
@@ -39,7 +39,7 @@ class Home extends Component {
           openai.createCompletion("text-davinci-002", {
             prompt: `Write a detailed and informative product description for ${formDataObj.productname}`,
             temperature: 0.8,
-            max_tokens: 617,
+            max_tokens: 250,
             top_p: 1,
             frequency_penalty: 0,
             presence_penalty: 0,
@@ -51,6 +51,7 @@ class Home extends Component {
                 loading: false
             })
         })
+        .catch(error => alert(error.message))
     }
 
     render () {
@@ -69,13 +70,13 @@ class Home extends Component {
                     <br />
                     <Form onSubmit={this.onFormSubmit}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>What Product Would You Like a Description for?</Form.Label>
+                            <Form.Label>What Product Would You Like a Description for? 💬</Form.Label>
                             <Form.Control
                               type='text'
                               name='productname'
                               placeholder="Enter Product Name" />
-                            <Form.Text className="text-muted">
-                                Enter as much information as possible to help the AI. EX: Luxurious swimwear for older women
+                            <Form.Text >
+                               <strong> Enter as much information as possible to help the AI. EX: Luxurious swimwear for older women</strong>
                             </Form.Text>
                         </Form.Group>
 
@@ -101,7 +102,7 @@ class Home extends Component {
 
                     <Card>
                         <Card.Body>
-                            <Card.Title><h1>{this.state.heading}</h1></Card.Title>
+                            <Card.Title><h1><strong>{this.state.heading}</strong></h1></Card.Title>
                             <hr />
                             <br />
                             <Card.Text>
